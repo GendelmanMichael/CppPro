@@ -3,6 +3,7 @@
 
 std::vector<int> v = {1, 2, 3, 4, 5};
 
+/*
 void int_func(int &i)
 {
     i *= i;
@@ -12,8 +13,10 @@ bool predicate(int &i)
 {
     return i > 10;
 }
+*/
 
-void for_each(std::vector<int> &v, void (*f)(int &))
+template <typename F>
+void for_each(std::vector<int> &v, F f) // void (*f)(int &))
 {
     for (int i = 0; i < v.size(); i++)
     {
@@ -21,7 +24,8 @@ void for_each(std::vector<int> &v, void (*f)(int &))
     }
 }
 
-bool all(std::vector<int> &v, bool (*f)(int &))
+template <typename F>
+bool all(std::vector<int> &v, F f) // bool (*f)(int &))
 {
     for (int i = 0; i < v.size(); i++)
     {
@@ -33,7 +37,8 @@ bool all(std::vector<int> &v, bool (*f)(int &))
     return true;
 }
 
-int count_if(std::vector<int> &v, bool (*f)(int &))
+template <typename F>
+int count_if(std::vector<int> &v, F f) // bool (*f)(int &))
 {
     int res = 0;
     for (int i = 0; i < v.size(); i++)
@@ -59,9 +64,14 @@ void print_vector(std::vector<int> &v)
 int main()
 {
     print_vector(v);
-    for_each(v, int_func);
+    for_each(v, [](int &i)
+             { i = i * i; }); // int_func);
     print_vector(v);
-    std::cout << all(v, predicate) << std::endl;
-    std::cout << count_if(v, predicate) << std::endl;
+    std::cout << all(v, [](int &i)
+                     { return i > 0; })
+              << std::endl;
+    std::cout << count_if(v, [](int &i)
+                          { return i > 10; })
+              << std::endl;
     return 0;
 }
