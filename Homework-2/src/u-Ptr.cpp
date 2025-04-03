@@ -31,7 +31,7 @@ public:
     }
     T &operator*() // розмінування додав амперсенд
     {
-        return ptr == nullptr ? T() : *ptr;
+        return *ptr;
     }
     T *operator->()
     {
@@ -58,7 +58,7 @@ public:
     }
     UniquePtr<T> &operator=(UniquePtr<T> &) = delete;
 
-    bool operator bool() const
+    operator bool() const
     {
         return ptr != nullptr;
     }
