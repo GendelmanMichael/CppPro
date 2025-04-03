@@ -29,7 +29,7 @@ public:
             delete ptr;
         }
     }
-    T operator*()
+    T &operator*() // розмінування додав амперсенд
     {
         return ptr == nullptr ? T() : *ptr;
     }
@@ -57,6 +57,11 @@ public:
         return *this;
     }
     UniquePtr<T> &operator=(UniquePtr<T> &) = delete;
+
+    bool operator bool() const
+    {
+        return ptr != nullptr;
+    }
 
 private:
     T *ptr;
