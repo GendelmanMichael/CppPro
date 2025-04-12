@@ -1,0 +1,697 @@
+michael@michael-g:~$ cd practice/Hillel_cpp_pro/
+michael@michael-g:~/practice/Hillel_cpp_pro$ ls
+Homework-1  Homework-2
+michael@michael-g:~/practice/Hillel_cpp_pro$ mkdir Homework-3
+michael@michael-g:~/practice/Hillel_cpp_pro$ ls
+Homework-1  Homework-2  Homework-3
+michael@michael-g:~/practice/Hillel_cpp_pro$ cd Homework-3
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git clone git@github.com:GendelmanMichael/CppProHomework_3.git
+Cloning into 'CppProHomework_3'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ touch first.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ ls
+CppProHomework_3  first.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ cat > first.txt <<EOF
+> First file text
+> EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ cat first.txt 
+First file text
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git add first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git commit -m "first commit to main"
+[main 15b73c3] first commit to main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Homework-3/first.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 357 bytes | 357.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:GendelmanMichael/CppPro.git
+   b3a4eb3..15b73c3  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.vscode/
+	CppProHomework_3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ touch second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ cat > second.txt <<EOF
+> Second File Text
+> EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ git add .
+warning: adding embedded git repository: Homework-3/CppProHomework_3
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> Homework-3/CppProHomework_3
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached Homework-3/CppProHomework_3
+hint: 
+hint: See "git help submodule" for more information.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3$ cd CppProHomework_3/
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git -v
+git version 2.43.0
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git remote -v
+origin	git@github.com:GendelmanMichael/CppProHomework_3.git (fetch)
+origin	git@github.com:GendelmanMichael/CppProHomework_3.git (push)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git > cat first.txt <<EOF
+> First File Text
+> EOF
+git: 'first.txt' is not a git command. See 'git --help'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat > first.txt <<EOF
+First File Text
+EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "first to main"
+[main 55b20ad] first to main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:GendelmanMichael/CppProHomework_3.git
+   b11a4b9..55b20ad  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat > second.txt <<EOF
+Second File Text
+EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "second to main"
+[main 32a1d67] second to main
+ 2 files changed, 1 insertion(+)
+ create mode 100644 cat
+ create mode 100644 second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ ls
+cat  first.txt  README.md  second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git rm cat
+rm 'cat'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ ls
+first.txt  README.md  second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git cat first.txt
+git: 'cat' is not a git command. See 'git --help'.
+
+The most similar commands are
+	clean
+	mktag
+	stage
+	stash
+	tag
+	var
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ ls
+first.txt  README.md  second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat first.txt 
+First File Text
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat second.txt 
+Second File Text
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    cat
+
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git restore --staged
+fatal: you must specify path(s) to restore
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git restore --staged cat
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ ls
+first.txt  README.md  second.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    cat
+
+no changes added to commit (use "git add" and/or "git commit -a")
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    cat
+
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "second to main"
+[main 7c9e3dc] second to main
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 cat
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 527 bytes | 263.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   55b20ad..7c9e3dc  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat > third.txt <<EOF
+> Third File Text
+> EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "third to main"
+[main c9e0aae] third to main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 third.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   7c9e3dc..c9e0aae  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout -b feature_branch_1
+Switched to a new branch 'feature_branch_1'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat > fourth.txt <<EOF
+Fourth File Text
+EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "First to Feature branch"
+[feature_branch_1 206b896] First to Feature branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+fatal: The current branch feature_branch_1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature_branch_1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --set-upstream origin feature_branch_1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature_branch_1' on GitHub by visiting:
+remote:      https://github.com/GendelmanMichael/CppProHomework_3/pull/new/feature_branch_1
+remote: 
+To github.com:GendelmanMichael/CppProHomework_3.git
+ * [new branch]      feature_branch_1 -> feature_branch_1
+branch 'feature_branch_1' set up to track 'origin/feature_branch_1'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout -b feature_branch_2
+Switched to a new branch 'feature_branch_2'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat >> first.txt <<EOF
+> text for merge conflict
+> EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat first.txt
+First File Text
+text for merge conflict
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "First to Feature branch 2 for merge conflict"
+[feature_branch_2 b422900] First to Feature branch 2 for merge conflict
+ 1 file changed, 1 insertion(+)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --set-upstream origin feature_branch_2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature_branch_2' on GitHub by visiting:
+remote:      https://github.com/GendelmanMichael/CppProHomework_3/pull/new/feature_branch_2
+remote: 
+To github.com:GendelmanMichael/CppProHomework_3.git
+ * [new branch]      feature_branch_2 -> feature_branch_2
+branch 'feature_branch_2' set up to track 'origin/feature_branch_2'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat >> first.txt <<EOF
+text for conflict on merge
+EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "First to main for merge conflict"
+[main 1683a32] First to main for merge conflict
+ 1 file changed, 1 insertion(+)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --set-upstream origin main
+To github.com:GendelmanMichael/CppProHomework_3.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:GendelmanMichael/CppProHomework_3.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 914 bytes | 914.00 KiB/s, done.
+From github.com:GendelmanMichael/CppProHomework_3
+   c9e0aae..33dd777  main       -> origin/main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git config pull.ff only
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint: 
+hint: 	git merge --no-ff
+hint: 
+hint: or:
+hint: 
+hint: 	git rebase
+hint: 
+hint: Disable this message with "git config advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Auto-merging first.txt
+CONFLICT (content): Merge conflict in first.txt
+Automatic merge failed; fix conflicts and then commit the result.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   first.txt
+	new file:   fourth.txt
+
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit
+[main bc12c25] Merge branch 'feature_branch_2'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+To github.com:GendelmanMichael/CppProHomework_3.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:GendelmanMichael/CppProHomework_3.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+hint: Diverging branches can't be fast-forwarded, you need to either:
+hint: 
+hint: 	git merge --no-ff
+hint: 
+hint: or:
+hint: 
+hint: 	git rebase
+hint: 
+hint: Disable this message with "git config advice.diverging false"
+fatal: Not possible to fast-forward, aborting.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge --no-ff
+Merge made by the 'ort' strategy.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull --force
+Already up to date.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Already up to date.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ cat >> first.txt <<EOF
+text for conflict on merge
+EOF
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "First to main for merge conflict"
+[main e0362d1] First to main for merge conflict
+ 1 file changed, 1 insertion(+)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 16, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 1.04 KiB | 267.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   33dd777..e0362d1  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Already up to date.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$  git commit -m " Try to conflict merge 2"
+[main ee9d2df]  Try to conflict merge 2
+ 1 file changed, 2 deletions(-)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   e0362d1..ee9d2df  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Already up to date.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* ee9d2df (HEAD -> main, origin/main, origin/HEAD)  Try to conflict merge 2
+* e0362d1 First to main for merge conflict
+*   9d0d1cc Merge remote-tracking branch 'refs/remotes/origin/main'
+|\  
+| *   33dd777 Merge pull request #1 from GendelmanMichael/feature_branch_1
+| |\  
+* | \   bc12c25 Merge branch 'feature_branch_2'
+|\ \ \  
+| * | | b422900 (origin/feature_branch_2, feature_branch_2) First to Feature branch 2 for merge conflict
+| | |/  
+| |/|   
+| * | 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+| |/  
+* / 1683a32 First to main for merge conflict
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git reset --hard 1683a32 
+HEAD is now at 1683a32 First to main for merge conflict
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:GendelmanMichael/CppProHomework_3.git
+ + ee9d2df...1683a32 main -> main (forced update)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git branch -d feature_branch_2
+warning: deleting branch 'feature_branch_2' that has been merged to
+         'refs/remotes/origin/feature_branch_2', but not yet merged to HEAD
+Deleted branch feature_branch_2 (was b422900).
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git branch -d origin/feature_branch_2
+error: branch 'origin/feature_branch_2' not found.
+Did you forget --remote?
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git branch -d -- remote feature_branch_2
+error: branch 'remote' not found
+error: branch 'feature_branch_2' not found
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git branch -d --remote feature_branch_2
+error: remote-tracking branch 'feature_branch_2' not found
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git branch -d --remote origin/feature_branch_2
+Deleted remote-tracking branch origin/feature_branch_2 (was b422900).
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* 1683a32 (HEAD -> main, origin/main, origin/HEAD) First to main for merge conflict
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout feature_branch_1 
+Switched to branch 'feature_branch_1'
+Your branch is up to date with 'origin/feature_branch_1'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout feature_branch_2
+error: pathspec 'feature_branch_2' did not match any file(s) known to git
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "ready for merge conflict"
+[feature_branch_1 07e775b] ready for merge conflict
+ 1 file changed, 1 insertion(+)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   206b896..07e775b  feature_branch_1 -> feature_branch_1
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* 07e775b (HEAD -> feature_branch_1, origin/feature_branch_1) ready for merge conflict
+* 206b896 First to Feature branch
+| * 1683a32 (origin/main, origin/HEAD, main) First to main for merge conflict
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git status
+On branch feature_branch_1
+Your branch is up to date with 'origin/feature_branch_1'.
+
+nothing to commit, working tree clean
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git reset --hard 206b896
+HEAD is now at 206b896 First to Feature branch
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:GendelmanMichael/CppProHomework_3.git
+ + 07e775b...206b896 feature_branch_1 -> feature_branch_1 (forced update)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* 1683a32 (origin/main, origin/HEAD, main) First to main for merge conflict
+| * 206b896 (HEAD -> feature_branch_1, origin/feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout -b feature_branch_2
+Switched to a new branch 'feature_branch_2'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit -m "changes for merge conflict on feature branch 2"
+[feature_branch_2 46d3f16] changes for merge conflict on feature branch 2
+ 1 file changed, 1 insertion(+)
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+fatal: The current branch feature_branch_2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature_branch_2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ ^C
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push --set-upstream origin feature_branch_2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature_branch_2' on GitHub by visiting:
+remote:      https://github.com/GendelmanMichael/CppProHomework_3/pull/new/feature_branch_2
+remote: 
+To github.com:GendelmanMichael/CppProHomework_3.git
+ * [new branch]      feature_branch_2 -> feature_branch_2
+branch 'feature_branch_2' set up to track 'origin/feature_branch_2'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+* 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+| * 1683a32 (HEAD -> main, origin/main, origin/HEAD) First to main for merge conflict
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+* 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+* 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+| * 1683a32 (HEAD -> main, origin/main, origin/HEAD) First to main for merge conflict
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (2/2), 999 bytes | 999.00 KiB/s, done.
+From github.com:GendelmanMichael/CppProHomework_3
+   1683a32..c2e6fd8  main       -> origin/main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   c2e6fd8 (origin/main, origin/HEAD) Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\  
+* | 1683a32 (HEAD -> main) First to main for merge conflict
+| | * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+| |/  
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Auto-merging first.txt
+CONFLICT (content): Merge conflict in first.txt
+Automatic merge failed; fix conflicts and then commit the result.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+To github.com:GendelmanMichael/CppProHomework_3.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:GendelmanMichael/CppProHomework_3.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit  after merge
+fatal: cannot do a partial commit during a merge.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   c2e6fd8 (origin/main, origin/HEAD) Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\  
+* | 1683a32 (HEAD -> main) First to main for merge conflict
+| | * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+| |/  
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git reset --hard HEAD
+HEAD is now at 1683a32 First to main for merge conflict
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   c2e6fd8 (origin/main, origin/HEAD) Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\  
+* | 1683a32 (HEAD -> main) First to main for merge conflict
+| | * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+| |/  
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+To github.com:GendelmanMichael/CppProHomework_3.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:GendelmanMichael/CppProHomework_3.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+Updating 1683a32..c2e6fd8
+Fast-forward
+ fourth.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fourth.txt
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   c2e6fd8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\  
+* | 1683a32 First to main for merge conflict
+| | * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+| |/  
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git merge feature_branch_2
+Auto-merging first.txt
+CONFLICT (content): Merge conflict in first.txt
+Automatic merge failed; fix conflicts and then commit the result.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Everything up-to-date
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   c2e6fd8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\  
+* | 1683a32 First to main for merge conflict
+| | * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+| |/  
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ nano first.txt 
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git fetch
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git add .
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git commit
+[main 9eb2a42] Merge branch 'feature_branch_2'
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:GendelmanMichael/CppProHomework_3.git
+   c2e6fd8..9eb2a42  main -> main
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ git log --oneline --decorate --graph --all
+*   9eb2a42 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'feature_branch_2'
+|\  
+| * 46d3f16 (origin/feature_branch_2, feature_branch_2) changes for merge conflict on feature branch 2
+* | c2e6fd8 Merge pull request #2 from GendelmanMichael/feature_branch_1
+|\| 
+| * 206b896 (origin/feature_branch_1, feature_branch_1) First to Feature branch
+* | 1683a32 First to main for merge conflict
+|/  
+* c9e0aae third to main
+* 7c9e3dc second to main
+* 32a1d67 second to main
+* 55b20ad first to main
+* b11a4b9 Initial commit
+michael@michael-g:~/practice/Hillel_cpp_pro/Homework-3/CppProHomework_3$ 
