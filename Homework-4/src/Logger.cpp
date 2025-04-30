@@ -82,32 +82,45 @@ private:
     Logger operator=(Logger &) = delete;
 };
 
+char *ToLowerCase(char *inp)
+{
+    int i = 0;
+    while (inp[i] != '\0')
+    {
+        inp[i] += (inp[i] >= 'A' && inp[i] <= 'Z') ? 32 : 0;
+        i++;
+    }
+    return inp;
+}
+
 int main(int argc, char *argv[])
 {
     if (argc > 1)
     {
-        std::string type(argv[1]);
+        std::string type(ToLowerCase(argv[1]));
 
-        if (type == "CONSOLE")
+        if (type == "console")
         {
             Logger::instance().set_sink(SinkType::CONSOLE);
         }
-        else if (type == "FILE")
+        else if (type == "file")
         {
             Logger::instance().set_sink(SinkType::FILE);
         }
-        else if (type == "NONE")
+        else if (type == "none")
         {
             Logger::instance().set_sink(SinkType::NONE);
         }
         else
         {
-            return 1;
+            std::cout << "Unknown logger type please chose CONSOLE or  FILE or NONE)" << std::endl;
+            return 0;
         }
 
         Logger::instance().log("Test message");
 
         return 0;
     }
-    return 2;
+    std::cout << "Please add type of logger after program call (CONSOLE, FILE, NONE)" << std::endl;
+    return 0;
 }
