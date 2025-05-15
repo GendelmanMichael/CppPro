@@ -80,9 +80,16 @@ public:
         int tr = 0;
         if (ftype.substr(0, 2) == "gt")
         {
-            type = "gt";
-            size_t skip(2);
-            tr = std::stoi(ftype.substr(2));
+            try
+            {
+                type = "gt";
+                size_t skip(2);
+                tr = std::stoi(ftype.substr(2));
+            }
+            catch (...)
+            {
+                return nullptr;
+            }
         }
         if (this->registry.find(type) != this->registry.end())
         {
