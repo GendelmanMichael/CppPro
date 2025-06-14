@@ -1,0 +1,14 @@
+-rootPath
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures
+-cmake-output
+-output-file
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/.qt/qml_imports/appTemperatures_conf.cmake
+-importPath
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/Temperatures
+-importPath
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug
+-importPath
+/home/michael/Qt/6.9.1/gcc_64/qml
+-qrcFiles
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/.qt/rcc/qmake_Temperatures.qrc
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/.qt/rcc/appTemperatures_raw_qml_0.qrc

@@ -1,0 +1,56 @@
+{
+    "classes": [
+        {
+            "className": "TempController",
+            "lineNumber": 7,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "cT",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "cTemp_handler",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "fT",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "fTemp_handler",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "kT",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "kTemp_handler",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "TempController",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "Controller.h",
+    "outputRevision": 69
+}

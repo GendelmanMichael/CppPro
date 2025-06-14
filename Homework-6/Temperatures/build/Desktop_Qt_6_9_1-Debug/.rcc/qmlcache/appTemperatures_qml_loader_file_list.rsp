@@ -1,0 +1,5 @@
+--resource
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/.qt/rcc/qmake_Temperatures.qrc
+--resource
+/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/.qt/rcc/appTemperatures_raw_qml_0.qrc
+/qt/qml/Temperatures/Main.qml

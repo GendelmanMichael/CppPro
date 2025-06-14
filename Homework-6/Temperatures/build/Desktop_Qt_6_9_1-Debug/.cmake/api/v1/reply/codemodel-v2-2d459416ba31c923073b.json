@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-2262576f155293ef4326.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Temperatures",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-f34cd6ed64598806e23a.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-e82d052970ea31be364e.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-ecb47c033bdc1b433ef3.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-076615bcdf8dcd7eb4c9.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-686e135c5df167e1f382.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures-Debug-f8ec12f6ddad5f0aed84.json",
+					"name" : "appTemperatures",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_autogen-Debug-21de51fda20c202fc6df.json",
+					"name" : "appTemperatures_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_autogen_timestamp_deps-Debug-f23de64ddde7de333714.json",
+					"name" : "appTemperatures_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_copy_qml-Debug-98a298269a49a053a9df.json",
+					"name" : "appTemperatures_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_copy_res-Debug-e917f16dfe86298f539a.json",
+					"name" : "appTemperatures_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_qmlimportscan-Debug-b4c7c6c5a0e482f7c815.json",
+					"name" : "appTemperatures_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_qmllint-Debug-fa1cfb2bce3878cf7039.json",
+					"name" : "appTemperatures_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_qmllint_json-Debug-a691ab0b1cd50ebabad5.json",
+					"name" : "appTemperatures_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_qmllint_module-Debug-5bb91fb4603c834d887c.json",
+					"name" : "appTemperatures_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appTemperatures_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appTemperatures_qmltyperegistration-Debug-c7a6cbf01939fcbdaab6.json",
+					"name" : "appTemperatures_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appTemperatures_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appTemperatures_aotstats_target-Debug-a0b77a47b2afd3007f1a.json",
+					"name" : "module_appTemperatures_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug",
+		"source" : "/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

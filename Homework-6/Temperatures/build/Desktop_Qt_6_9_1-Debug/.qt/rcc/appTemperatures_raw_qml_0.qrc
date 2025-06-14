@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Temperatures/">
+    <file alias="Main.qml">/home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/Main.qml</file>
+  </qresource>
+</RCC>
+

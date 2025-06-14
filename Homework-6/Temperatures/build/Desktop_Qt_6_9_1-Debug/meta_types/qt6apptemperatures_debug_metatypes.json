@@ -1,0 +1,143 @@
+[
+    {
+        "classes": [
+            {
+                "className": "TempController",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "cT",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "cTemp_handler",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "fT",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "fTemp_handler",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "kT",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "kTemp_handler",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "TempController",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "Controller.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "TempModel",
+                "lineNumber": 6,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "cTemp",
+                        "notify": "cTempChanged",
+                        "read": "getCTemp",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setCTemp"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "fTemp",
+                        "notify": "fTempChanged",
+                        "read": "getFTemp",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setFTemp"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "kTemp",
+                        "notify": "kTempChanged",
+                        "read": "getKTemp",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setKTemp"
+                    }
+                ],
+                "qualifiedClassName": "TempModel",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "cTempChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "fTempChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "kTempChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "Model.h",
+        "outputRevision": 69
+    }
+]
