@@ -18,7 +18,6 @@ Window {
                 text: "Celsius";
                 width: 150;
                 height: 30;
-                anchors.horizontalCenter: right;
                 horizontalAlignment: TextInput.AlignRight;
                 font.pixelSize: 25;
                 rightPadding: 5
@@ -49,7 +48,6 @@ Window {
                 text: "Fahrenheit";
                 width: 150;
                 height: 30;
-                anchors.horizontalCenter: right;
                 horizontalAlignment: TextInput.AlignRight;
                 font.pixelSize: 25;
                 rightPadding: 5
@@ -79,7 +77,6 @@ Window {
                 text: "Kelvin";
                 width: 150;
                 height: 30;
-                anchors.horizontalCenter: right;
                 horizontalAlignment: TextInput.AlignRight;
                 font.pixelSize: 25;
                 rightPadding: 5
