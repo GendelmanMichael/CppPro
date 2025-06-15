@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_appTemperatures_FILE /home/michael/practice/Hillel_cpp_pro/Homework-6/Temperatures/build/Desktop_Qt_6_9_1-Debug/appTemperatures)
-set(__QT_DEPLOY_TARGET_appTemperatures_TYPE EXECUTABLE)
