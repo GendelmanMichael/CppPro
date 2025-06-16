@@ -13,6 +13,16 @@ Window {
         anchors.margins: 10
         spacing: 10
 
+        Text{
+            id: msg
+            text: model.msg;
+            width: 250
+            height: 30
+            horizontalAlignment: TextInput.Center
+            font.pixelSize: 25
+            color: "red"
+        }
+
         Row{
             Label {
                 text: "Celsius";
@@ -31,11 +41,6 @@ Window {
                 text: model.cTemp;
                 width: 100;
                 height: 30;
-                validator: DoubleValidator{
-                    bottom: -273.16;
-                    decimals: 2;
-                    notation: DoubleValidator.StandardNotation;
-                }
                 horizontalAlignment: TextInput.AlignHCenter
                 onTextEdited: {
                     controller.cTemp_handler(cTemp.text)
@@ -60,11 +65,6 @@ Window {
                 text: model.fTemp;
                 width: 100;
                 height: 30;
-                validator: DoubleValidator{
-                    bottom: -459.67;
-                    decimals: 2;
-                    notation: DoubleValidator.StandardNotation;
-                }
                 horizontalAlignment: TextInput.AlignHCenter
                 onTextEdited: {
                     controller.fTemp_handler(fTemp.text)
@@ -89,11 +89,6 @@ Window {
                 text: model.kTemp;
                 width: 100;
                 height: 30;
-                validator: DoubleValidator{
-                    bottom: 0;
-                    decimals: 2;
-                    notation: DoubleValidator.StandardNotation;
-                }
                 horizontalAlignment: TextInput.AlignHCenter
                 onTextEdited: {
                     controller.kTemp_handler(kTemp.text)

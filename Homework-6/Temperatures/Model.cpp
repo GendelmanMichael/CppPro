@@ -6,6 +6,15 @@ TempModel::TempModel(double cT, QObject *parent) : QObject(parent){
     this->fTemp = 32 + 9*cT/5;
 }
 
+QString TempModel::getMsg(){
+    return this->msg;
+}
+
+void TempModel::setMsg(QString val){
+    this->msg = val;
+    emit msgChanged();
+}
+
 double TempModel::getCTemp(){
     return this->cTemp;
 }
